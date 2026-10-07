@@ -28,8 +28,6 @@ Aplikasi web kasir sederhana untuk kantin kampus. Kasir bisa memasukkan barang, 
 - [x] Tombol Transaksi baru untuk mengosongkan keranjang
 
 ## Tangkapan Layar
-> Ganti dengan screenshot kamu (minimal 3).
-
 | Tampilan | Gambar |
 |---|---|
 | Form input utama | `![form](screenshots/form.png)` |
