@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Cuaca Mahasiswa</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-4 md:p-8">
+  <div class="max-w-5xl mx-auto">
+
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold text-blue-600 mb-2">
+        🌤️ Dashboard Cuaca Mahasiswa
+      </h1>
+      <p class="text-gray-600">
+        Pantau cuaca real-time di kampus, kos, atau kampung halamanmu — ditenagai Open-Meteo API.
+      </p>
+    </header>
+
+    <!-- Form tambah / edit lokasi -->
+    <section class="bg-white p-6 rounded-lg shadow-md mb-8">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4" id="formTitle">Tambah Lokasi Baru</h2>
+
+      <div class="mb-4">
+        <label class="block text-sm text-gray-500 mb-1" for="presetLocation">
+          Pilih Lokasi Cepat (opsional)
+        </label>
+        <select id="presetLocation"
+          class="w-full md:w-1/2 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <option value="">-- Isi manual di bawah --</option>
+        </select>
+        <p class="text-xs text-gray-400 mt-1">
+          Memilih dari daftar akan otomatis mengisi nama & koordinat. Tidak ada di daftar? Isi manual saja.
+        </p>
+      </div>
+
+      <form id="locationForm" class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <input type="hidden" id="locationId">
+
+        <div class="md:col-span-2">
+          <label class="block text-sm text-gray-500 mb-1" for="locationName">Nama Lokasi</label>
+          <input id="locationName" type="text" required placeholder="cth. ITERA, Lampung Selatan"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+
+        <div>
+          <label class="block text-sm text-gray-500 mb-1" for="locationLat">Latitude</label>
+          <input id="locationLat" type="number" step="any" required placeholder="-5.36"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+
+        <div>
+          <label class="block text-sm text-gray-500 mb-1" for="locationLon">Longitude</label>
+          <input id="locationLon" type="number" step="any" required placeholder="105.31"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+
+        <div class="md:col-span-4 flex gap-3 mt-1">
+          <button type="submit" id="submitBtn"
+            class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded font-medium transition duration-150">
+            Tambah Lokasi
+          </button>
+          <button type="button" id="cancelEditBtn"
+            class="bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded font-medium transition duration-150 hidden">
+            Batal Edit
+          </button>
+          <button type="button" id="refreshAllBtn"
+            class="ml-auto bg-emerald-500 hover:bg-emerald-600 text-white py-2 px-4 rounded font-medium transition duration-150">
+            🔄 Refresh Semua Cuaca
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Status loading / pesan -->
+    <div id="statusMessage" class="text-sm text-gray-500 mb-4"></div>
+
+    <!-- Grid kartu cuaca -->
+    <section id="locationGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Kartu cuaca dirender secara dinamis oleh JavaScript -->
+    </section>
+
+    <p id="emptyState" class="text-center text-gray-400 mt-10 hidden">
+      Belum ada lokasi tersimpan. Tambahkan lokasi pertamamu di atas! 👆
+    </p>
+
+    <footer class="text-center text-xs text-gray-400 mt-12">
+      Dibuat untuk Tugas Praktikum PAW Pertemuan 2 · Data cuaca oleh
+      <a href="https://open-meteo.com" target="_blank" class="underline">Open-Meteo</a>
+    </footer>
+  </div>
+
+  <!-- type="module" penting agar import/export ES6 berjalan di browser -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
