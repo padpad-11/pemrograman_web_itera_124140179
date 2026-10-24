@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manajemen Buku</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Library dari CDN (butuh internet) -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/prop-types@15.8.1/prop-types.js"></script>
+  <script src="https://unpkg.com/history@5.3.0/umd/history.development.js"></script>
+  <script src="https://unpkg.com/react-router@6.3.0/umd/react-router.development.js"></script>
+  <script src="https://unpkg.com/react-router-dom@6.3.0/umd/react-router-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- Import bagian React yang dipakai (cukup sekali di sini) -->
+  <script src="js/setup.js"></script>
+
+  <!-- Custom hooks -->
+  <script type="text/babel" src="js/hooks/useLocalStorage.js"></script>
+  <script type="text/babel" src="js/hooks/useBookStats.js"></script>
+
+  <!-- Context API -->
+  <script type="text/babel" src="js/context/BookContext.js"></script>
+
+  <!-- Komponen reusable -->
+  <script type="text/babel" src="js/components/BookForm.js"></script>
+  <script type="text/babel" src="js/components/BookFilter.js"></script>
+  <script type="text/babel" src="js/components/BookList.js"></script>
+
+  <!-- Halaman -->
+  <script type="text/babel" src="js/pages/Home.js"></script>
+  <script type="text/babel" src="js/pages/Stats.js"></script>
+
+  <!-- App utama -->
+  <script type="text/babel" src="js/App.js"></script>
+  <script type="text/babel" src="js/main.js"></script>
+</body>
+
+</html>
