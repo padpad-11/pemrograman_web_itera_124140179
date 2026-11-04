@@ -45,12 +45,8 @@ python main.py
 ```
 (Gunakan `python3` jika `python` tidak dikenali.)
 
-## Hasil Run
-(./screenshot/foto1.png)
-(./screenshot/foto2.png)
 
 ### Soal 1
-`![Soal 1](screenshots/soal1.png)`
 ```
 === PENGHITUNG BMI ===
 Masukkan berat badan (kg)  : Masukkan tinggi badan (m)  : 
@@ -62,7 +58,6 @@ Kategori    : Berat badan normal
 ```
 
 ### Soal 2
-`![Soal 2](screenshots/soal2.png)`
 ```
 === DATA NILAI MAHASISWA ===
 +-----+----------------------+------------+-------------+-------+
@@ -90,7 +85,6 @@ Mahasiswa dengan Nilai Akhir TERENDAH:
 ```
 
 ### Soal 3
-`![Soal 3](screenshots/soal3.png)`
 ```
 
 ============================================
