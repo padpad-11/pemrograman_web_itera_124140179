@@ -26,4 +26,4 @@ python main.py
 ```
 
 ## Screenshot Output
-(./tugas_perpustakaan/ss/code.png)
+(./ss/code.png)
